@@ -1,0 +1,401 @@
+{
+  "source_file": "Guia TISS e Fatura Hospitalar Sintética para Teste de Auditoria.pdf",
+  "header": {
+    "numero_guia": "2026.10.884920-4",
+    "registro_ans": "34599-2 (SaúdePlena S/A)",
+    "guia_solicitacao": "AUTH-9920184-SP",
+    "prestador": "Hospital Santa Helena de São Paulo S.A. | CNPJ: 61.440.112/0001-89 | CNES: 2077481",
+    "cpf_beneficiario": "123.456.789-00",
+    "nome_beneficiario": "CARLOS EDUARDO MENDES DA SILVA",
+    "carteirinha": "0034.8891.220194.00-1 (Executivo)",
+    "data_admissao": "18/10/2026 às 07:15",
+    "data_alta": "20/10/2026 às 11:30",
+    "carater_acomodacao": "2 - Urgência / Apartamento",
+    "cid10": "K80.0 (Colelitíase c/ colecistite aguda)",
+    "relatorio_clinico": "Cirurgião Principal: Dr . Henrique Albuquerque (CRM-SP 144 . 892) | Anestesista: Dra . Fernanda Góes (CRM-SP 162 . 104) | Data da Cirurgia: 18/10/2026 (Início: 09:30 / Término: 10:55) . Descrição Técnica Operatória: Paciente admitido com quadro de dor em hipocôndrio direito e ultrassonografia prévia evidenciando cálculos biliares . Sob anestesia geral , realizado pneumoperitônio por punção com agulha de Veress e introdução de 3 trocartes para acesso exclusivamente videolaparoscópico (sem necessidade de conversão para cirurgia aberta) . Identificada vesícula biliar distendida com aderências frouxas . Realizada dissecção do triângulo de Calot , identificação da artéria cística e do ducto cístico , sendo ambos ligados exclusivamente com clipes metálicos de titânio LT-300 (2 cartuchos utilizados) e seccionados com tesoura laparoscópica . Não foi realizada colangiografia transoperatória devido à anatomia biliar clara e ausência de dilatação de colédoco . Vesícula biliar dissecada do leito hepático com eletrocautério monopolar e retirada por portal umbilical . Revisão da hemostasia sem intercorrências . Síntese dos portais aponeuróticos e pele . Evolução Pós-Operatória e Destino: Paciente extubado em sala cirúrgica , permaneceu 2 horas em Recuperação Pós - Anestésica (RPA) e foi encaminhado diretamente ao Apartamento Standard (Leito 402-B) às 13:15 do dia 18/10/2026 , onde permaneceu estável em ar ambiente durante toda a internação (48h totais) , sem passagem por unidade de terapia intensiva (UTI) . Recebeu alta hospitalar melhorado em 20/10/2026 às 11:30 . Nota: Exame de Tomografia de Abdome Total (Item 005) já havia sido realizado em pronto-socorro externo em 16/10/2026 e trazido impresso pelo próprio paciente na admissão . ## 6 . FECHAMENTO GERAL DA CONTA HOSPITALAR (CONSOLIDAÇÃO TISS PÁGINAS 1 E 2) | TOTAL | TOTAL | TOTAL | TOTAL | VALOR TOTAL | |------------------|-----------------|------------------|--------------|------------------| | PROCED . /EXAMES | DIÁRIAS/TAXAS | MATERIAIS/OPME | MEDICAMENTOS | FATURADO | | R$ 8 . 990 , 00 | R$ 6 . 460 , 00 | R$ 13 . 810 , 00 | R$ 309 , 00 | R$ 29 . 569 , 00 | Dr . Henrique Albuquerque — CRM-SP 144 . 892 Assinatura e Carimbo do Médico Central de Faturamento — Hospital Santa Helena S . A . Declaro que os serviços acima foram Reservado à Auditoria Médica / IA (Operadora) Status: Pendente de Análise Técnica e",
+    "valor_total_faturado": 29569.0
+  },
+  "items": [
+    {
+      "item_id": "001",
+      "data": "18/10/2026",
+      "tabela": "22",
+      "codigo_tuss": "10101012",
+      "descricao": "Consulta em consultório (no horário normal ou preestabelecido) - Pré-operatória",
+      "registro_anvisa": null,
+      "quantidade": 1,
+      "valor_unitario": 250.0,
+      "valor_total": 250.0
+    },
+    {
+      "item_id": "002",
+      "data": "18/10/2026",
+      "tabela": "22",
+      "codigo_tuss": "31005128",
+      "descricao": "Colecistectomia com colangiografia por videolaparoscopia (Via principal)",
+      "registro_anvisa": null,
+      "quantidade": 1,
+      "valor_unitario": 4850.0,
+      "valor_total": 4850.0
+    },
+    {
+      "item_id": "003",
+      "data": "18/10/2026",
+      "tabela": "22",
+      "codigo_tuss": "31009050",
+      "descricao": "Laparotomia exploradora ,  ou para biópsia ,  ou para drenagem de abscesso",
+      "registro_anvisa": null,
+      "quantidade": 1,
+      "valor_unitario": 2300.0,
+      "valor_total": 2300.0
+    },
+    {
+      "item_id": "004",
+      "data": "18/10/2026",
+      "tabela": "22",
+      "codigo_tuss": "40304361",
+      "descricao": "Hemograma com contagem de plaquetas ou frações (eritrograma ,  leucograma ,  plaquetas)",
+      "registro_anvisa": null,
+      "quantidade": 2,
+      "valor_unitario": 45.0,
+      "valor_total": 90.0
+    },
+    {
+      "item_id": "005",
+      "data": "18/10/2026",
+      "tabela": "22",
+      "codigo_tuss": "41001095",
+      "descricao": "Tomografia computadorizada de abdome total (abdome superior e pelve)",
+      "registro_anvisa": null,
+      "quantidade": 1,
+      "valor_unitario": 1120.0,
+      "valor_total": 1120.0
+    },
+    {
+      "item_id": "006",
+      "data": "19/10/2026",
+      "tabela": "22",
+      "codigo_tuss": "10102019",
+      "descricao": "Visita hospitalar (pac .  internado) - Evolução clínica enfermaria/apartamento",
+      "registro_anvisa": null,
+      "quantidade": 2,
+      "valor_unitario": 190.0,
+      "valor_total": 380.0
+    },
+    {
+      "item_id": "007",
+      "data": "20/10/2026",
+      "tabela": "18",
+      "codigo_tuss": "60000511",
+      "descricao": "Diária de Apartamento Standard (com banheiro privativo e direito a acompanhante)",
+      "registro_anvisa": null,
+      "quantidade": 2,
+      "valor_unitario": 980.0,
+      "valor_total": 1960.0
+    },
+    {
+      "item_id": "008",
+      "data": "19/10/2026",
+      "tabela": "18",
+      "codigo_tuss": "60001020",
+      "descricao": "Diária de Unidade de Terapia Intensiva (UTI Adulto Geral  -  Tipo III)",
+      "registro_anvisa": null,
+      "quantidade": 1,
+      "valor_unitario": 2650.0,
+      "valor_total": 2650.0
+    },
+    {
+      "item_id": "009",
+      "data": "18/10/2026",
+      "tabela": "18",
+      "codigo_tuss": "60023104",
+      "descricao": "Taxa de Sala Cirúrgica Porte 4 (Inclui recuperação pós-anestésica imediata  - RPA)",
+      "registro_anvisa": null,
+      "quantidade": 1,
+      "valor_unitario": 1850.0,
+      "valor_total": 1850.0
+    },
+    {
+      "item_id": "010",
+      "data": "18/10/2026",
+      "tabela": "19",
+      "codigo_tuss": "70409112",
+      "descricao": "Trocarte descartável c/ lâmina protegida 10mm (Kit Videolaparoscopia)",
+      "registro_anvisa": "10188290041",
+      "quantidade": 3,
+      "valor_unitario": 420.0,
+      "valor_total": 1260.0
+    },
+    {
+      "item_id": "011",
+      "data": "18/10/2026",
+      "tabela": "19",
+      "codigo_tuss": "70881204",
+      "descricao": "Grampeador Linear Cortante Endoscópico Articulado 60mm + Carga Azul",
+      "registro_anvisa": "80145901120",
+      "quantidade": 3,
+      "valor_unitario": 3850.0,
+      "valor_total": 11550.0
+    },
+    {
+      "item_id": "012",
+      "data": "18/10/2026",
+      "tabela": "19",
+      "codigo_tuss": "70201944",
+      "descricao": "Clipe de Titânio p/ Ligadura Vascular LT - 300 Médio/Grande (Cartucho c/ 6 un)",
+      "registro_anvisa": "10309120088",
+      "quantidade": 2,
+      "valor_unitario": 290.0,
+      "valor_total": 580.0
+    },
+    {
+      "item_id": "013",
+      "data": "18/10/2026",
+      "tabela": "19",
+      "codigo_tuss": "70100210",
+      "descricao": "Luva Cirúrgica Estéril Látex N . 7 . 5 + Compressas Gaze 7 , 5x7 , 5cm (Insumo Sala)",
+      "registro_anvisa": "10299100012",
+      "quantidade": 15,
+      "valor_unitario": 28.0,
+      "valor_total": 420.0
+    },
+    {
+      "item_id": "014",
+      "data": "18/10/2026",
+      "tabela": "20",
+      "codigo_tuss": "90114022",
+      "descricao": "Ceftriaxona Dissódica 1g Pó Liofilizado Injetável IV (Profilaxia Cirúrgica)",
+      "registro_anvisa": "10043091200",
+      "quantidade": 4,
+      "valor_unitario": 48.0,
+      "valor_total": 192.0
+    },
+    {
+      "item_id": "015",
+      "data": "19/10/2026",
+      "tabela": "20",
+      "codigo_tuss": "90289105",
+      "descricao": "Ondansetrona Cloridrato 4mg/2ml Solução Injetável IV (Antiemético)",
+      "registro_anvisa": "10492011803",
+      "quantidade": 6,
+      "valor_unitario": 19.5,
+      "valor_total": 117.0
+    }
+  ],
+  "tables_count": 5,
+  "tables_raw": [
+    [
+      {
+        "1 .  IDENTIFICAÇÃO DA OPERADORA ,  PRESTADOR EXECUTIVO ,  BENEFICIÁRIO E INTERNAÇÃO": "1 .  REGISTRO ANS OPERADORA 34599 - 2 (SaúdePlena S/A)",
+        "1 .  IDENTIFICAÇÃO DA OPERADORA ,  PRESTADOR EXECUTIVO ,  BENEFICIÁRIO E INTERNAÇÃO_1": "2 .  N º  GUIA SOLICITAÇÃO SADT/INT . AUTH - 9920184 - SP",
+        "1 .  IDENTIFICAÇÃO DA OPERADORA ,  PRESTADOR EXECUTIVO ,  BENEFICIÁRIO E INTERNAÇÃO_2": "3 .  NOME DO PRESTADOR HOSPITALAR / CNPJ / CNES Hospital Santa Helena de São Paulo S . A .  | CNPJ: 61 . 440 . 112/0001 - 89 | CNES: 2077481",
+        "1 .  IDENTIFICAÇÃO DA OPERADORA ,  PRESTADOR EXECUTIVO ,  BENEFICIÁRIO E INTERNAÇÃO_3": "3 .  NOME DO PRESTADOR HOSPITALAR / CNPJ / CNES Hospital Santa Helena de São Paulo S . A .  | CNPJ: 61 . 440 . 112/0001 - 89 | CNES: 2077481"
+      },
+      {
+        "1 .  IDENTIFICAÇÃO DA OPERADORA ,  PRESTADOR EXECUTIVO ,  BENEFICIÁRIO E INTERNAÇÃO": "4 .  NOME DO BENEFICIÁRIO / CPF CARLOS EDUARDO MENDES DA SILVA | CPF: 123 . 456 . 789 - 00",
+        "1 .  IDENTIFICAÇÃO DA OPERADORA ,  PRESTADOR EXECUTIVO ,  BENEFICIÁRIO E INTERNAÇÃO_1": "4 .  NOME DO BENEFICIÁRIO / CPF CARLOS EDUARDO MENDES DA SILVA | CPF: 123 . 456 . 789 - 00",
+        "1 .  IDENTIFICAÇÃO DA OPERADORA ,  PRESTADOR EXECUTIVO ,  BENEFICIÁRIO E INTERNAÇÃO_2": "5 .  CARTEIRINHA / PLANO 0034 . 8891 . 220194 . 00 - 1 (Executivo)",
+        "1 .  IDENTIFICAÇÃO DA OPERADORA ,  PRESTADOR EXECUTIVO ,  BENEFICIÁRIO E INTERNAÇÃO_3": "6 .  DATA NASC .  / SEXO 14/05/1978 (48 anos) / Masc ."
+      },
+      {
+        "1 .  IDENTIFICAÇÃO DA OPERADORA ,  PRESTADOR EXECUTIVO ,  BENEFICIÁRIO E INTERNAÇÃO": "7 .  DATA/HORA ADMISSÃO 18/10/2026 às 07:15",
+        "1 .  IDENTIFICAÇÃO DA OPERADORA ,  PRESTADOR EXECUTIVO ,  BENEFICIÁRIO E INTERNAÇÃO_1": "8 .  DATA/HORA ALTA 20/10/2026 às 11:30",
+        "1 .  IDENTIFICAÇÃO DA OPERADORA ,  PRESTADOR EXECUTIVO ,  BENEFICIÁRIO E INTERNAÇÃO_2": "9 .  CARÁTER / ACOMODAÇÃO 2  -  Urgência / Apartamento",
+        "1 .  IDENTIFICAÇÃO DA OPERADORA ,  PRESTADOR EXECUTIVO ,  BENEFICIÁRIO E INTERNAÇÃO_3": "10 .  CID - 10 PRINCIPAL E SECUNDÁRIO K80 . 0 (Colelitíase c/ colecistite aguda)"
+      }
+    ],
+    [
+      {
+        "ITEM ": "001 ",
+        "DATA ": "18/10/2026 ",
+        "TAB .": "22 ",
+        "CÓDIGO TUSS": "10101012 ",
+        "DESCRIÇÃO DO PROCEDIMENTO / DIÁRIA / TAXA": "Consulta em consultório (no horário normal ou preestabelecido) - Pré-operatória",
+        "QTD": "1 ",
+        "VLR . UNIT (R$)": "250 , 00 ",
+        "VLR . TOTAL (R$)": "250 , 00"
+      },
+      {
+        "ITEM ": "002 ",
+        "DATA ": "18/10/2026 ",
+        "TAB .": "22 ",
+        "CÓDIGO TUSS": "31005128 ",
+        "DESCRIÇÃO DO PROCEDIMENTO / DIÁRIA / TAXA": "Colecistectomia com colangiografia por videolaparoscopia (Via principal)",
+        "QTD": "1 ",
+        "VLR . UNIT (R$)": "4 . 850 , 00 ",
+        "VLR . TOTAL (R$)": "4 . 850 , 00"
+      },
+      {
+        "ITEM ": "003 ",
+        "DATA ": "18/10/2026 ",
+        "TAB .": "22 ",
+        "CÓDIGO TUSS": "31009050 ",
+        "DESCRIÇÃO DO PROCEDIMENTO / DIÁRIA / TAXA": "Laparotomia exploradora ,  ou para biópsia ,  ou para drenagem de abscesso",
+        "QTD": "1 ",
+        "VLR . UNIT (R$)": "2 . 300 , 00 ",
+        "VLR . TOTAL (R$)": "2 . 300 , 00"
+      },
+      {
+        "ITEM ": "004 ",
+        "DATA ": "18/10/2026 ",
+        "TAB .": "22 ",
+        "CÓDIGO TUSS": "40304361 ",
+        "DESCRIÇÃO DO PROCEDIMENTO / DIÁRIA / TAXA": "Hemograma com contagem de plaquetas ou frações (eritrograma ,  leucograma ,  plaquetas)",
+        "QTD": "2 ",
+        "VLR . UNIT (R$)": "45 , 00 ",
+        "VLR . TOTAL (R$)": "90 , 00"
+      },
+      {
+        "ITEM ": "005 ",
+        "DATA ": "18/10/2026 ",
+        "TAB .": "22 ",
+        "CÓDIGO TUSS": "41001095 ",
+        "DESCRIÇÃO DO PROCEDIMENTO / DIÁRIA / TAXA": "Tomografia computadorizada de abdome total (abdome superior e pelve)",
+        "QTD": "1 ",
+        "VLR . UNIT (R$)": "1 . 120 , 00 ",
+        "VLR . TOTAL (R$)": "1 . 120 , 00"
+      },
+      {
+        "ITEM ": "006 ",
+        "DATA ": "19/10/2026 ",
+        "TAB .": "22 ",
+        "CÓDIGO TUSS": "10102019 ",
+        "DESCRIÇÃO DO PROCEDIMENTO / DIÁRIA / TAXA": "Visita hospitalar (pac .  internado) - Evolução clínica enfermaria/apartamento",
+        "QTD": "2 ",
+        "VLR . UNIT (R$)": "190 , 00 ",
+        "VLR . TOTAL (R$)": "380 , 00"
+      },
+      {
+        "ITEM ": "007 ",
+        "DATA ": "20/10/2026 ",
+        "TAB .": "18 ",
+        "CÓDIGO TUSS": "60000511 ",
+        "DESCRIÇÃO DO PROCEDIMENTO / DIÁRIA / TAXA": "Diária de Apartamento Standard (com banheiro privativo e direito a acompanhante)",
+        "QTD": "2 ",
+        "VLR . UNIT (R$)": "980 , 00 ",
+        "VLR . TOTAL (R$)": "1 . 960 , 00"
+      },
+      {
+        "ITEM ": "008 ",
+        "DATA ": "19/10/2026 ",
+        "TAB .": "18 ",
+        "CÓDIGO TUSS": "60001020 ",
+        "DESCRIÇÃO DO PROCEDIMENTO / DIÁRIA / TAXA": "Diária de Unidade de Terapia Intensiva (UTI Adulto Geral  -  Tipo III)",
+        "QTD": "1 ",
+        "VLR . UNIT (R$)": "2 . 650 , 00 ",
+        "VLR . TOTAL (R$)": "2 . 650 , 00"
+      },
+      {
+        "ITEM ": "009 ",
+        "DATA ": "18/10/2026 ",
+        "TAB .": "18 ",
+        "CÓDIGO TUSS": "60023104 ",
+        "DESCRIÇÃO DO PROCEDIMENTO / DIÁRIA / TAXA": "Taxa de Sala Cirúrgica Porte 4 (Inclui recuperação pós-anestésica imediata  - RPA)",
+        "QTD": "1 ",
+        "VLR . UNIT (R$)": "1 . 850 , 00 ",
+        "VLR . TOTAL (R$)": "1 . 850 , 00"
+      }
+    ],
+    [
+      {
+        "0": "3 .  SUBTOTAIS DA PÁGINA 1 (PROCEDIMENTOS ,  EXAMES ,  DIÁRIAS E TAXAS HOSPITALARES)",
+        "1": "3 .  SUBTOTAIS DA PÁGINA 1 (PROCEDIMENTOS ,  EXAMES ,  DIÁRIAS E TAXAS HOSPITALARES)",
+        "2": "3 .  SUBTOTAIS DA PÁGINA 1 (PROCEDIMENTOS ,  EXAMES ,  DIÁRIAS E TAXAS HOSPITALARES)",
+        "3": "3 .  SUBTOTAIS DA PÁGINA 1 (PROCEDIMENTOS ,  EXAMES ,  DIÁRIAS E TAXAS HOSPITALARES)",
+        "4": "3 .  SUBTOTAIS DA PÁGINA 1 (PROCEDIMENTOS ,  EXAMES ,  DIÁRIAS E TAXAS HOSPITALARES)"
+      },
+      {
+        "0": "HONORÁRIOS / PROC . R$ 7 . 780 , 00",
+        "1": "SADT / EXAMES R$ 1 . 210 , 00",
+        "2": "DIÁRIAS (APT + UTI) R$ 4 . 610 , 00",
+        "3": "TAXAS / ALUGUÉIS R$ 1 . 850 , 00",
+        "4": "SUBTOTAL PÁG .  1 R$ 15 . 450 , 00"
+      }
+    ],
+    [
+      {
+        "ITEM ": "010 ",
+        "DATA ": "18/10/2026 ",
+        "TAB .": "19 ",
+        "CÓDIGO TUSS": "70409112 ",
+        "DESCRIÇÃO DO MATERIAL / MEDICAMENTO / FABRICANTE": "Trocarte descartável c/ lâmina protegida 10mm (Kit Videolaparoscopia)",
+        "REG .  ANVISA ": "10188290041 ",
+        "QTD ": "3 ",
+        "UNIT (R$)": "420 , 00 ",
+        "TOTAL (R$)": "1 . 260 , 00"
+      },
+      {
+        "ITEM ": "011 ",
+        "DATA ": "18/10/2026 ",
+        "TAB .": "19 ",
+        "CÓDIGO TUSS": "70881204 ",
+        "DESCRIÇÃO DO MATERIAL / MEDICAMENTO / FABRICANTE": "Grampeador Linear Cortante Endoscópico Articulado 60mm + Carga Azul",
+        "REG .  ANVISA ": "80145901120 ",
+        "QTD ": "3 ",
+        "UNIT (R$)": "3 . 850 , 00 ",
+        "TOTAL (R$)": "11 . 550 , 00"
+      },
+      {
+        "ITEM ": "012 ",
+        "DATA ": "18/10/2026 ",
+        "TAB .": "19 ",
+        "CÓDIGO TUSS": "70201944 ",
+        "DESCRIÇÃO DO MATERIAL / MEDICAMENTO / FABRICANTE": "Clipe de Titânio p/ Ligadura Vascular LT - 300 Médio/Grande (Cartucho c/ 6 un)",
+        "REG .  ANVISA ": "10309120088 ",
+        "QTD ": "2 ",
+        "UNIT (R$)": "290 , 00 ",
+        "TOTAL (R$)": "580 , 00"
+      },
+      {
+        "ITEM ": "013 ",
+        "DATA ": "18/10/2026 ",
+        "TAB .": "19 ",
+        "CÓDIGO TUSS": "70100210 ",
+        "DESCRIÇÃO DO MATERIAL / MEDICAMENTO / FABRICANTE": "Luva Cirúrgica Estéril Látex N . 7 . 5 + Compressas Gaze 7 , 5x7 , 5cm (Insumo Sala)",
+        "REG .  ANVISA ": "10299100012 ",
+        "QTD ": "15 ",
+        "UNIT (R$)": "28 , 00 ",
+        "TOTAL (R$)": "420 , 00"
+      },
+      {
+        "ITEM ": "014 ",
+        "DATA ": "18/10/2026 ",
+        "TAB .": "20 ",
+        "CÓDIGO TUSS": "90114022 ",
+        "DESCRIÇÃO DO MATERIAL / MEDICAMENTO / FABRICANTE": "Ceftriaxona Dissódica 1g Pó Liofilizado Injetável IV (Profilaxia Cirúrgica)",
+        "REG .  ANVISA ": "10043091200 ",
+        "QTD ": "4 ",
+        "UNIT (R$)": "48 , 00 ",
+        "TOTAL (R$)": "192 , 00"
+      },
+      {
+        "ITEM ": "015 ",
+        "DATA ": "19/10/2026 ",
+        "TAB .": "20 ",
+        "CÓDIGO TUSS": "90289105 ",
+        "DESCRIÇÃO DO MATERIAL / MEDICAMENTO / FABRICANTE": "Ondansetrona Cloridrato 4mg/2ml Solução Injetável IV (Antiemético)",
+        "REG .  ANVISA ": "10492011803 ",
+        "QTD ": "6 ",
+        "UNIT (R$)": "19 , 50 ",
+        "TOTAL (R$)": "117 , 00"
+      }
+    ],
+    [
+      {
+        "TOTAL": "PROCED . /EXAMES",
+        "TOTAL_1": "DIÁRIAS/TAXAS",
+        "TOTAL_2": "MATERIAIS/OPME",
+        "TOTAL_3": "MEDICAMENTOS",
+        "VALOR TOTAL": "FATURADO"
+      },
+      {
+        "TOTAL": "R$ 8 . 990 , 00",
+        "TOTAL_1": "R$ 6 . 460 , 00",
+        "TOTAL_2": "R$ 13 . 810 , 00",
+        "TOTAL_3": "R$ 309 , 00",
+        "VALOR TOTAL": "R$ 29 . 569 , 00"
+      }
+    ]
+  ],
+  "docling_schema_version": "DoclingDocument"
+}
