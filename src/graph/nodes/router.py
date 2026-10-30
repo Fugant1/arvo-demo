@@ -1,7 +1,7 @@
 import json
 from typing import Any, Dict, List
 
-from src.models.schemas import AuditGraphState, TriageItemDecision
+from src.states.schemas import AuditGraphState, TriageItemDecision
 from src.utils.llm_router import call_routed_llm
 
 # Códigos de itens sabidamente críticos ou que exigem auditoria cruzada (SQL/Laudo/OPME/Regras ANS)
@@ -87,7 +87,8 @@ def triage_router_node(state: AuditGraphState) -> Dict[str, Any]:
             {"role": "user", "content": user_prompt},
         ],
         fallback_builder=lambda: _build_deterministic_triage(items),
-        temperature=0.0,
+        max_completion_tokens=2048,
+        #temperature=0.0,
     )
 
     raw_results = llm_output.get("triage_results", [])

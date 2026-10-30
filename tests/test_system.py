@@ -7,7 +7,7 @@ from src.graph.nodes.critic import _deterministic_critic_verification, critic_no
 from src.graph.nodes.extractor import extract_pdf_with_docling
 from src.graph.nodes.retriever import planner_executor_node
 from src.graph.nodes.router import triage_router_node
-from src.models.schemas import BilledItem, GlosaSuggestion
+from src.states.schemas import BilledItem, GlosaSuggestion
 from src.ui import get_single_page_ui_html
 from src.utils.db_manager import (
     execute_readonly_sql,

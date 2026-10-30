@@ -10,7 +10,7 @@ from docling.datamodel.base_models import InputFormat
 from docling.datamodel.pipeline_options import PdfPipelineOptions
 from docling.document_converter import DocumentConverter, PdfFormatOption
 
-from src.models.schemas import AuditGraphState, BilledItem, PatientHeader
+from src.states.schemas import AuditGraphState, BilledItem, PatientHeader
 
 BASE_DIR = Path(__file__).resolve().parents[3]
 

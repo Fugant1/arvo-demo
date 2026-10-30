@@ -10,7 +10,7 @@ from src.graph.nodes.extractor import extractor_node
 from src.graph.nodes.hitl import hitl_node
 from src.graph.nodes.retriever import planner_executor_node
 from src.graph.nodes.router import triage_router_node
-from src.models.schemas import AuditGraphState
+from src.states.schemas import AuditGraphState
 from src.utils.db_manager import init_sqlite_db
 from src.utils.nosql_store import NoSQLAuditStore
 

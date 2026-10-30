@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
 
 from src.graph.graph import resume_audit_from_hitl, run_audit_until_hitl
-from src.models.schemas import (
+from src.states.schemas import (
     AnalyzeResponse,
     ExecutionMetric,
     GlosaSuggestion,

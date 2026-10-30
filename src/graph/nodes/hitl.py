@@ -1,7 +1,7 @@
 from typing import Any, Dict, List
 from langgraph.types import interrupt
 
-from src.models.schemas import AuditGraphState
+from src.states.schemas import AuditGraphState
 from src.utils.nosql_store import NoSQLAuditStore
 
 

@@ -1,7 +1,7 @@
 import json
 from typing import Any, Dict, List
 
-from src.models.schemas import AuditGraphState, CriticReview
+from src.states.schemas import AuditGraphState, CriticReview
 from src.utils.llm_router import call_routed_llm
 
 
@@ -114,7 +114,8 @@ def critic_node(state: AuditGraphState) -> Dict[str, Any]:
             {"role": "user", "content": user_prompt},
         ],
         fallback_builder=lambda: deterministic_check,
-        temperature=0.0,
+        max_completion_tokens=1024,
+        #temperature=0.0,
     )
 
     # A validação formal determinística tem poder de veto caso falte código TUSS ou cláusula

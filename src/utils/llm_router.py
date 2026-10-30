@@ -40,12 +40,13 @@ def call_routed_llm(
     tier: Literal["fast", "reasoning"],
     messages: List[Dict[str, str]],
     fallback_builder: Callable[[], Dict[str, Any]],
+    max_completion_tokens: int = 2500,
     temperature: float = 0.1,
 ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
     """
     Roteador central LiteLLM:
-    - tier='fast'      -> gemini/gemini-2.5-flash-lite (Triage Router)
-    - tier='reasoning' -> gemini/gemini-2.5-pro (com fallback p/ gemini/gemini-2.5-flash)
+    - tier='fast'      -> gemini/gemini-3.5-flash-lite (Triage Router)
+    - tier='reasoning' -> gemini/gemini-3.8-flash (com fallback p/ gemini/gemini-2.5-flash)
     Registra contagem de tokens (prompt, completion, total) e latência em ms.
     """
     primary_model = MODEL_TRIAGE_FAST if tier == "fast" else MODEL_AUDIT_REASONING
@@ -64,7 +65,8 @@ def call_routed_llm(
                 response = litellm.completion(
                     model=model_name,
                     messages=messages,
-                    temperature=temperature,
+                    max_completion_tokens=max_completion_tokens,
+                    #temperature=temperature,
                     response_format={"type": "json_object"},
                     api_key=api_key,
                 )

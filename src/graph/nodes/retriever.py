@@ -1,7 +1,7 @@
 import json
 from typing import Any, Dict, List
 
-from src.models.schemas import AuditGraphState, GlosaSuggestion
+from src.states.schemas import AuditGraphState, GlosaSuggestion
 from src.utils.llm_router import call_routed_llm
 from src.utils.mcp_server import invoke_mcp_tool_sync
 
@@ -284,7 +284,8 @@ def planner_executor_node(state: AuditGraphState) -> Dict[str, Any]:
             {"role": "user", "content": user_prompt},
         ],
         fallback_builder=lambda: reference_data,
-        temperature=0.1,
+        max_completion_tokens=4096,
+        #temperature=0.1,
     )
 
     # Normaliza e garante que todas as glosas obrigatórias tenham os campos e cláusulas preenchidos
