@@ -229,16 +229,13 @@ def planner_executor_node(state: AuditGraphState) -> Dict[str, Any]:
         {"sql_query": sql_query, "cpf": cpf, "data_referencia": "2026-10-18"},
     )
 
-    # 2. Consumo da ferramenta MCP: search_tuss_rules_rag
+    # 2. Consumo da ferramenta MCP: search_tuss_rules_rag focado estritamente nos itens suspeitos
     rag_query = (
-        "Regras de auditoria ANS TUSS duplicidade consulta 10101012 15 dias "
-        "upcoding colecistectomia colangiografia 31005128 laparotomia 31009050 "
-        "tomografia externa 41001095 visita hospitalar 10102019 diária UTI 60001020 "
-        "OPME grampeador linear 70881204 luva gaze taxa de sala 70100210"
+        f"Regras ANS TUSS auditoria contratual para os códigos: {' '.join(suspicious_codes)}"
     )
     rag_evidence = invoke_mcp_tool_sync(
         "search_tuss_rules_rag",
-        {"query": rag_query, "codigos_tuss": suspicious_codes, "top_k": 15},
+        {"query": rag_query, "codigos_tuss": suspicious_codes, "top_k": len(suspicious_codes)},
     )
 
     mcp_evidence = {
@@ -285,7 +282,8 @@ def planner_executor_node(state: AuditGraphState) -> Dict[str, Any]:
         ],
         fallback_builder=lambda: reference_data,
         max_completion_tokens=4096,
-        #temperature=0.1,
+        reasoning_effort="low",
+        timeout=35.0,
     )
 
     # Normaliza e garante que todas as glosas obrigatórias tenham os campos e cláusulas preenchidos

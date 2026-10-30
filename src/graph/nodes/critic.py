@@ -97,10 +97,21 @@ def critic_node(state: AuditGraphState) -> Dict[str, Any]:
         "itens_reprovados (lista de item_id) e feedback_correcao (string)."
     )
 
+    # Envia apenas os campos estritamente necessários para validação, enxugando o prompt
+    compact_glosas = [
+        {
+            "item_id": g.get("item_id"),
+            "codigo_tuss": g.get("codigo_tuss"),
+            "valor_glosado": g.get("valor_glosado"),
+            "clausula_contratual": g.get("clausula_contratual"),
+            "justificativa_tecnica": g.get("justificativa_tecnica"),
+        }
+        for g in glosas
+    ]
+
     user_prompt = json.dumps(
         {
-            "glosas_sugeridas": glosas,
-            "regras_oficiais_mcp": rules_rag,
+            "glosas_sugeridas": compact_glosas,
             "verificacao_deterministica_previa": deterministic_check,
         },
         ensure_ascii=False,
@@ -108,14 +119,14 @@ def critic_node(state: AuditGraphState) -> Dict[str, Any]:
 
     llm_output, metric = call_routed_llm(
         step_name="critic_validator",
-        tier="reasoning",
+        tier="fast",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
         ],
         fallback_builder=lambda: deterministic_check,
-        max_completion_tokens=1024,
-        #temperature=0.0,
+        max_completion_tokens=512,
+        timeout=15.0,
     )
 
     # A validação formal determinística tem poder de veto caso falte código TUSS ou cláusula

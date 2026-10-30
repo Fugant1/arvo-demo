@@ -1,9 +1,12 @@
-from functools import lru_cache
+import hashlib
 import json
 import re
 import time
+from functools import lru_cache
 from pathlib import Path
 from typing import Any, Dict, List
+
+_DOCLING_MEM_CACHE: Dict[str, Dict[str, Any]] = {}
 
 from docling.backend.pypdfium2_backend import PyPdfiumDocumentBackend
 from docling.datamodel.base_models import InputFormat
@@ -175,7 +178,7 @@ def _parse_header_from_markdown(markdown_text: str, items: List[Dict[str, Any]])
 
 
 def extract_pdf_with_docling(pdf_path: str) -> Dict[str, Any]:
-    """Executa o Docling para extrair texto em Markdown e tabelas estruturadas em JSON."""
+    """Executa o Docling para extrair texto em Markdown e tabelas estruturadas em JSON com cache em memória."""
     t0 = time.perf_counter()
     resolved_path = Path(pdf_path)
     if not resolved_path.exists():
@@ -188,6 +191,23 @@ def extract_pdf_with_docling(pdf_path: str) -> Dict[str, Any]:
             if candidate.exists():
                 resolved_path = candidate
                 break
+
+    file_bytes = resolved_path.read_bytes()
+    file_sha256 = hashlib.sha256(file_bytes).hexdigest()
+
+    if file_sha256 in _DOCLING_MEM_CACHE:
+        cached = _DOCLING_MEM_CACHE[file_sha256]
+        latency_ms = round((time.perf_counter() - t0) * 1000.0, 2)
+        cached_copy = dict(cached)
+        cached_copy["metric"] = {
+            "step_name": "docling_extractor",
+            "model": "docling-pdf-table-extractor (cached)",
+            "latency_ms": latency_ms,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0,
+        }
+        return cached_copy
 
     converter = _build_converter()
     conv_result = converter.convert(str(resolved_path))
@@ -237,13 +257,15 @@ def extract_pdf_with_docling(pdf_path: str) -> Dict[str, Any]:
         "total_tokens": 0,
     }
 
-    return {
+    result = {
         "extracted_markdown": markdown_text,
         "extracted_json": extracted_json,
         "header": header,
         "items": items,
         "metric": metric,
     }
+    _DOCLING_MEM_CACHE[file_sha256] = result
+    return result
 
 
 def extractor_node(state: AuditGraphState) -> Dict[str, Any]:

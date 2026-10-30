@@ -2,7 +2,7 @@ import json
 import os
 import re
 import time
-from typing import Any, Callable, Dict, List, Literal, Tuple
+from typing import Any, Callable, Dict, List, Literal, Optional, Tuple
 from dotenv import load_dotenv
 import litellm
 
@@ -40,13 +40,14 @@ def call_routed_llm(
     tier: Literal["fast", "reasoning"],
     messages: List[Dict[str, str]],
     fallback_builder: Callable[[], Dict[str, Any]],
-    max_completion_tokens: int = 2500,
-    temperature: float = 0.1,
+    max_completion_tokens: int = 4096,
+    reasoning_effort: Optional[str] = None,
+    timeout: float = 35.0,
 ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
     """
     Roteador central LiteLLM:
-    - tier='fast'      -> gemini/gemini-3.5-flash-lite (Triage Router)
-    - tier='reasoning' -> gemini/gemini-3.8-flash (com fallback p/ gemini/gemini-2.5-flash)
+    - tier='fast'      -> gemini-flash-lite (Triage Router)
+    - tier='reasoning' -> gemini-flash (Planner e Critic com reasoning_effort controlado)
     Registra contagem de tokens (prompt, completion, total) e latência em ms.
     """
     primary_model = MODEL_TRIAGE_FAST if tier == "fast" else MODEL_AUDIT_REASONING
@@ -62,14 +63,19 @@ def call_routed_llm(
     if api_key:
         for model_name in candidate_models:
             try:
-                response = litellm.completion(
-                    model=model_name,
-                    messages=messages,
-                    max_completion_tokens=max_completion_tokens,
-                    #temperature=temperature,
-                    response_format={"type": "json_object"},
-                    api_key=api_key,
-                )
+                kwargs: Dict[str, Any] = {
+                    "model": model_name,
+                    "messages": messages,
+                    "max_completion_tokens": max_completion_tokens,
+                    "response_format": {"type": "json_object"},
+                    "api_key": api_key,
+                    "timeout": timeout,
+                }
+                # Controla o orçamento de raciocínio interno para evitar minutos de espera
+                if reasoning_effort:
+                    kwargs["reasoning_effort"] = reasoning_effort
+
+                response = litellm.completion(**kwargs)
                 latency_ms = round((time.perf_counter() - t0) * 1000.0, 2)
                 content = response.choices[0].message.content or "{}"
                 parsed = _extract_json_block(content)
